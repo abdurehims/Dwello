@@ -1,6 +1,6 @@
 import logo from "../assets/images/logo.png";
-import search from "../assets/images/search.png";
-import user from "../assets/images/user.png";
+import search from "../assets/icons/search.png";
+import user from "../assets/icons/user.png";
 
 function Navbar() {
   return (

@@ -2,6 +2,8 @@ import './App.css'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Houses from './components/Houses'
+import Why from './components/Why'
+import PropertyCard from './components/PropertyCard'
 
 function App() {
   
@@ -10,6 +12,9 @@ function App() {
     <Navbar/>
     <Hero/>
       <Houses />
+      <Why />
+      <PropertyCard />
+
     </>
   )
 }
