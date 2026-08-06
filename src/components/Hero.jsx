@@ -3,7 +3,7 @@ import SearchBox from "./SearchBox";
 
 function Hero() {
   return (
-    <section className="bg-[#F8F1EA]">
+    <section className="bg-[#F8F1EA] pb-4">
 
       {/* Top: heading + image overlapping */}
       <div className="relative max-w-[1400px] h-[760px] mx-auto px-8 pt-16 pb-0 flex items-center justify-between gap-8 overflow-visible">

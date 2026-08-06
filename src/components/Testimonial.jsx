@@ -6,8 +6,8 @@ import michael from '../assets/images/michael.png';
 import emily from '../assets/images/emily.png';
 import star from '../assets/icons/star-4.5.png';
 import Stars from '../assets/icons/star-5.png';
-import leftArrow from '../assets/icons/leftOpen.png';
-import rightArrow from '../assets/icons/rightopen.png';
+import leftArrow from '../assets/icons/leftArrow.png'
+import rightArrow from '../assets/icons/rightArrow.png';
 
 function Testmonial() {
   const testimonials = [
@@ -107,11 +107,11 @@ function Testmonial() {
         </div>
 
         <div className="flex justify-center items-center gap-4 pt-9">
-          <button className="w-12 h-12 rounded-full bg-[#2B1B12] flex items-center justify-center hover:scale-90 transition-colors">
-            <img src={leftArrow} alt="Previous" className="w-5 h-5 object-contain" />
+          <button className="w-16 h-16 rounded-full flex items-center justify-center hover:scale-90 transition-colors">
+            <img src={leftArrow} alt="Previous" className="w-12 h-12 object-contain" />
           </button>
-          <button className="w-12 h-12 rounded-full bg-[#2B1B12] flex items-center justify-center hover:scale-90 transition-colors">
-            <img src={rightArrow} alt="Next" className="w-5 h-5 object-contain" />
+          <button className="w-16 h-16 rounded-full flex items-center justify-center hover:scale-90 transition-colors">
+            <img src={rightArrow} alt="Next" className="w-12 h-12 object-contain" />
           </button>
         </div>
       </div>
