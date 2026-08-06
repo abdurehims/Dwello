@@ -6,42 +6,41 @@ import rooms from '../assets/icons/rooms.png';
 import length from '../assets/icons/size.png';
 
 function PropertyCard() {
-  const characters =[
+  const characters = [
     {
-      id:1,
+      id: 1,
       image: houseA,
       location: "San Francisco, California",
-      rooms:4,
-      size: 3500,
-      price: 2500000
+      rooms: 4,
+      size: '3,500',
+      price: '$2,500,000'
     },
     {
-      id:2,
+      id: 2,
       image: houseB,
       location: "Beverly Hills, California",
-      rooms:3,
-      size: 1500,
-      price:850000
+      rooms: 3,
+      size: '1,500',
+      price: '$850,000'
     },
     {
-      id:3,
+      id: 3,
       image: houseC,
       location: "Palo Alto, California",
       rooms: 6,
-      size: 4000 ,
-      price:3700000
+      size: '4.000',
+      price: '$3,700,000'
     }
   ]
   return (
     <section>
       <div>
-        <h1 className='pt-13 font-bold text-center font-sans text-4xl'>Our Popular Residences</h1>
-
+        <h1 className='pt-13 font-bold text-center font-sans text-4xl mt-0'>Our Popular Residences</h1>
         <div className='flex gap-10   flex-wrap justify-center p-8 bg-white min-h-screen font-sans'>
-           {characters.map((Character)=>(
-          <div  key= {Character.id} className='w-[310px] h-[450px] rounded-2xl overflow-hidden bg-[#e3d2c4]'>
+          {characters.map((Character) => (
+            <div key={Character.id} className='w-[310px] h-[450px] rounded-2xl overflow-hidden bg-[#e3d2c4]'>
               <div>
-                <img src={Character.image} className='w-cover h-[50%]'/>
+                <img src={Character.image} className='w-cover h-[50%]' />
               </div>
               <div className='flex p-3'>
                 <img src={location} />
@@ -50,7 +49,7 @@ function PropertyCard() {
               <div className='flex gap-1 p-3'>
                 <img src={rooms} />
                 <p>{Character.rooms} Rooms</p>
-                <img src={length}  className='pl-9'/>
+                <img src={length} className='pl-9' />
                 <p>{Character.size} sq ft</p>
               </div>
               <div className='flex  items-center mt-3'>
@@ -60,53 +59,9 @@ function PropertyCard() {
               <div>
               </div>
             </div>
-           ))}
-{/* 
-            <div>
-              <div>
-                <img src={houseB} />
-              </div>
-              <div>
-                <img src={location} />
-                <h1>San Francisco, California</h1>
-              </div>
-              <div>
-                <img src={rooms} />
-                <p>4 Rooms</p>
-                <img src={length} />
-                <p>3,500 sq ft</p>
-              </div>
-              <div>
-                <button> Sign Up</button>
-                <h3>$2,500,000</h3>
-              </div>
-              <div>
-              </div>
-            </div>
+          ))}
 
-            <div>
-              <div>
-                <img src={houseC} />
-              </div>
-              <div>
-                <img src={location} />
-                <h1>San Francisco, California</h1>
-              </div>
-              <div>
-                <img src={rooms} />
-                <p>4 Rooms</p>
-                <img src={length} />
-                <p>3,500 sq ft</p>
-              </div>
-              <div>
-                <button> Sign Up</button>
-                <h3>$2,500,000</h3>
-              </div>
-              <div>
-              </div>
-            </div> */}
-
-         </div>
+        </div>
 
       </div>
     </section>
