@@ -5,6 +5,8 @@ import Houses from './components/Houses'
 import Why from './components/Why'
 import PropertyCard from './components/PropertyCard'
 import Testimonial from './components/Testimonial'
+import Questions from './components/Questions'
+import Footer from './components/Footer'
 
 function App() {
   
@@ -16,6 +18,8 @@ function App() {
       <Why />
       <PropertyCard />
       <Testimonial />
+      <Questions />
+      <EmailForm />
 
     </>
   )
