@@ -3,7 +3,7 @@ import email from '../assets/icons/email.png';
 
 function Questions() {
   return (
-    <div>
+    <div className='mb-30 mt-40'>
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-[#352520] leading-tight mb-2">
           Do You Have Any Questions? <br className="hidden md:block" /> Get Help From Us

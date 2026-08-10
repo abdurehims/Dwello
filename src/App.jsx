@@ -19,7 +19,7 @@ function App() {
       <PropertyCard />
       <Testimonial />
       <Questions />
-      <EmailForm />
+      <Footer />
 
     </>
   )
