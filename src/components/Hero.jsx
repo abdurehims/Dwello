@@ -1,49 +1,24 @@
-import house from "../assets/images/heroImage.png";
-import SearchBox from "./SearchBox";
+import house from '../assets/images/heroImage.png';
+import SearchBox from './SearchBox';
 
-function Hero() {
+export default function Hero({ filters, setFilters, query, setQuery }) {
   return (
-    <section className="bg-[#F8F1EA] pb-4">
-
-      {/* Top: heading + image overlapping */}
-      <div className="relative max-w-[1400px] h-[760px] mx-auto px-8 pt-16 pb-0 flex items-center justify-between gap-8 overflow-visible">
-
-        {/* Left — text */}
-        <div className="relative z-10 max-w-sm flex-shrink-0">
-          <h1 className="text-[#2B1B12] text-5xl md:text-6xl font-extrabold 
-          leading-tight text-[74px] leading-[82px] tracking-[-2px]">
-            Find Your
-            <br />
-            Dream Home
-
-          </h1>
-
-          <p className="mt-6 text-sm md:text-base text-[#5E5147] leading-7 max-w-xs">
-            Explore our curated selection of exquisite properties
-            meticulously tailored to your unique dream home vision
-          </p>
-
-          <button className="mt-10 bg-[#2B1B12] text-white px-10 py-4 rounded-xl text-base font-semibold hover:bg-[#3B2619] duration-300
-          px-14 py-5 rounded-xl text-xl">
-            Sign up
-          </button>
+    <section id="home" className="hero-section">
+      <div className="hero-inner">
+        <div className="hero-copy">
+          <span className="eyebrow"><i /> A better way to find home</span>
+          <h1>Find a place<br />you’ll <em>love</em> to live.</h1>
+          <p>Thoughtfully selected homes, trusted local experts, and a smoother journey from the first search to the front door.</p>
+          <div className="hero-actions"><a className="button button-dark" href="#residences">Explore properties <span>↗</span></a><a className="text-link" href="#services">How it works <span>→</span></a></div>
+          <div className="hero-proof"><div className="avatar-stack"><span>J</span><span>M</span><span>A</span><b>+</b></div><div><strong>Trusted by home seekers</strong><small>Personal guidance, every step.</small></div></div>
         </div>
-
-        {/* Right — large house image, overflows right edge */}
-        <div className="flex-1 flex justify-end -mr-8">
-          <img
-            src={house}
-            alt="Modern luxury home"
-            className="w-[640px] md:w-[780px] lg:w-[1080px] xl:w-[1000px] object-contain"
-          />
+        <div className="hero-visual">
+          <div className="hero-image-frame"><img src={house} alt="Contemporary home surrounded by greenery" /></div>
+          <div className="floating-note"><span className="note-icon">⌂</span><div><strong>Find your place</strong><small>Make your next move count</small></div><span className="note-arrow">↗</span></div>
+          <div className="hero-stamp"><span>DWELLO</span><strong>HOME<br/>STARTS<br/>HERE.</strong></div>
         </div>
-
       </div>
-
-      <SearchBox />
-
+      <SearchBox filters={filters} setFilters={setFilters} query={query} setQuery={setQuery} />
     </section>
   );
 }
-
-export default Hero;

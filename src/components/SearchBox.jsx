@@ -1,38 +1,13 @@
-import locationIcon from "../assets/icons/location.png";
-import homeIcon from "../assets/icons/home.png";
-import priceIcon from "../assets/icons/price.png";
-
-function SearchBox() {
+export default function SearchBox({ filters, setFilters, query, setQuery }) {
+  const update = (key, value) => setFilters((current) => ({ ...current, [key]: value }));
   return (
-    <div className="w-[90%] max-w-[1180px] mx-auto -mt-8 relative z-20 pb-10">
-      <div className="bg-[#D9C5B2] rounded-2xl px-8 py-9 flex flex-col md:flex-row items-center gap-6 shadow-lg">
-
-        {/* Location */}
-        <div className="flex-1 flex items-center justify-between bg-white rounded-xl px-5 py-4 gap-3 cursor-pointer hover:shadow-md transition">
-          <span className="text-[#2B1B12] font-medium text-base">Location</span>
-          <img src={locationIcon} alt="location" className="w-5 h-5 object-contain" />
-        </div>
-
-        {/* Type */}
-        <div className="flex-1 flex items-center justify-between bg-white rounded-xl px-5 py-4 gap-3 cursor-pointer hover:shadow-md transition">
-          <span className="text-[#2B1B12] font-medium text-base">Type</span>
-          <img src={homeIcon} alt="type" className="w-5 h-5 object-contain" />
-        </div>
-
-        {/* Price Range */}
-        <div className="flex-1 flex items-center justify-between bg-white rounded-xl px-5 py-4 gap-3 cursor-pointer hover:shadow-md transition">
-          <span className="text-[#2B1B12] font-medium text-base">Price Range</span>
-          <img src={priceIcon} alt="price range" className="w-5 h-5 object-contain" />
-        </div>
-
-        {/* Search button */}
-        <button className="bg-[#2B1B12] text-white px-10 py-4 rounded-xl text-base font-semibold hover:bg-[#3B2619] duration-300 whitespace-nowrap">
-          Sign up
-        </button>
-
-      </div>
-    </div>
+    <form className="search-panel" onSubmit={(event) => { event.preventDefault(); document.getElementById('residences')?.scrollIntoView({ behavior: 'smooth' }); }}>
+      <div className="search-heading"><span>Find your next home</span><small>Use the filters to narrow your search</small></div>
+      <label className="search-field"><span className="field-icon">⌖</span><span className="field-content"><small>Location</small><select value={filters.location} onChange={(e) => update('location', e.target.value)}><option>Any location</option><option>San Francisco</option><option>Beverly Hills</option><option>Palo Alto</option></select></span></label>
+      <label className="search-field"><span className="field-icon">⌂</span><span className="field-content"><small>Property type</small><select value={filters.type} onChange={(e) => update('type', e.target.value)}><option>Any property</option><option>House</option><option>Villa</option><option>Apartment</option></select></span></label>
+      <label className="search-field"><span className="field-icon">＄</span><span className="field-content"><small>Price range</small><select value={filters.budget} onChange={(e) => update('budget', e.target.value)}><option>Any budget</option><option>Under $1M</option><option>$1M – $3M</option><option>Above $3M</option></select></span></label>
+      <label className="search-keyword"><span>⌕</span><input value={query} onChange={(e) => setQuery(e.target.value)} placeholder="Keyword or neighbourhood" aria-label="Search by keyword" /></label>
+      <button className="search-submit" type="submit"><span>Search homes</span><b>↗</b></button>
+    </form>
   );
 }
-
-export default SearchBox;
